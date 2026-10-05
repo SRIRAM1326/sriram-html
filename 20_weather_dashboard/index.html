@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyCast | Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <div class="weather-app">
+        
+        <div class="demo-banner">
+            <i class="fa-solid fa-info-circle"></i> This application displays demo data for educational purposes.
+        </div>
+
+        <div class="search-section">
+            <form id="search-form" class="search-bar">
+                <i class="fa-solid fa-location-dot"></i>
+                <input type="text" id="city-input" placeholder="Search for a city..." autocomplete="off">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+
+        <main class="dashboard" id="dashboard">
+            <!-- Left: Current Weather -->
+            <div class="current-weather">
+                <div class="city-info">
+                    <h1 id="city-name">London, UK</h1>
+                    <p id="current-date">Monday, 5 Oct 2026</p>
+                </div>
+
+                <div class="temp-display">
+                    <div class="weather-icon">
+                        <i class="fa-solid fa-cloud-sun" id="main-icon"></i>
+                    </div>
+                    <div class="temp-info">
+                        <h2 id="current-temp">18°C</h2>
+                        <p id="current-condition">Partly Cloudy</p>
+                    </div>
+                </div>
+
+                <div class="weather-details-grid">
+                    <div class="detail-box">
+                        <i class="fa-solid fa-temperature-half"></i>
+                        <div>
+                            <span class="label">Feels Like</span>
+                            <span class="value" id="feels-like">17°C</span>
+                        </div>
+                    </div>
+                    <div class="detail-box">
+                        <i class="fa-solid fa-droplet"></i>
+                        <div>
+                            <span class="label">Humidity</span>
+                            <span class="value" id="humidity">65%</span>
+                        </div>
+                    </div>
+                    <div class="detail-box">
+                        <i class="fa-solid fa-wind"></i>
+                        <div>
+                            <span class="label">Wind Speed</span>
+                            <span class="value" id="wind">12 km/h</span>
+                        </div>
+                    </div>
+                    <div class="detail-box">
+                        <i class="fa-regular fa-sun"></i>
+                        <div>
+                            <span class="label">Sunrise/Set</span>
+                            <span class="value" id="sun-times">06:14 / 18:32</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Forecast -->
+            <div class="forecast-section">
+                <h3>5-Day Forecast</h3>
+                <div class="forecast-list" id="forecast-list">
+                    
+                    <div class="forecast-item">
+                        <span class="day">Tue</span>
+                        <i class="fa-solid fa-sun icon text-yellow"></i>
+                        <span class="condition">Sunny</span>
+                        <div class="hi-lo">
+                            <span class="hi">22°</span>
+                            <span class="lo">14°</span>
+                        </div>
+                    </div>
+
+                    <div class="forecast-item">
+                        <span class="day">Wed</span>
+                        <i class="fa-solid fa-cloud-showers-heavy icon text-blue"></i>
+                        <span class="condition">Rain</span>
+                        <div class="hi-lo">
+                            <span class="hi">16°</span>
+                            <span class="lo">11°</span>
+                        </div>
+                    </div>
+
+                    <div class="forecast-item">
+                        <span class="day">Thu</span>
+                        <i class="fa-solid fa-cloud icon text-gray"></i>
+                        <span class="condition">Cloudy</span>
+                        <div class="hi-lo">
+                            <span class="hi">18°</span>
+                            <span class="lo">12°</span>
+                        </div>
+                    </div>
+
+                    <div class="forecast-item">
+                        <span class="day">Fri</span>
+                        <i class="fa-solid fa-cloud-sun icon text-yellow"></i>
+                        <span class="condition">Partly Cloudy</span>
+                        <div class="hi-lo">
+                            <span class="hi">20°</span>
+                            <span class="lo">13°</span>
+                        </div>
+                    </div>
+
+                    <div class="forecast-item">
+                        <span class="day">Sat</span>
+                        <i class="fa-solid fa-sun icon text-yellow"></i>
+                        <span class="condition">Sunny</span>
+                        <div class="hi-lo">
+                            <span class="hi">24°</span>
+                            <span class="lo">15°</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

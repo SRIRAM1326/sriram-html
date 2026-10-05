@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        
+        <header class="header">
+            <div>
+                <h1>Personal Finance</h1>
+                <p>Welcome back! Here's your financial overview.</p>
+            </div>
+            <button class="add-btn"><i class="fa-solid fa-plus"></i> Add Transaction</button>
+        </header>
+
+        <!-- Top Summary Cards -->
+        <div class="summary-cards">
+            <div class="card balance-card">
+                <h3>Total Balance</h3>
+                <h2>$12,450.00</h2>
+                <p>+2.5% from last month</p>
+            </div>
+            <div class="card stat-card">
+                <div class="icon income"><i class="fa-solid fa-arrow-down"></i></div>
+                <div>
+                    <h3>Income</h3>
+                    <h2>$5,200.00</h2>
+                </div>
+            </div>
+            <div class="card stat-card">
+                <div class="icon expense"><i class="fa-solid fa-arrow-up"></i></div>
+                <div>
+                    <h3>Expenses</h3>
+                    <h2>$2,850.00</h2>
+                </div>
+            </div>
+            <div class="card stat-card">
+                <div class="icon savings"><i class="fa-solid fa-piggy-bank"></i></div>
+                <div>
+                    <h3>Savings</h3>
+                    <h2>$2,350.00</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-grid">
+            
+            <!-- Left Column: Transactions & Budget -->
+            <div class="left-col">
+                
+                <!-- Recent Transactions -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Recent Transactions</h2>
+                        <a href="#">View All</a>
+                    </div>
+                    <div class="transaction-list">
+                        
+                        <div class="transaction-item">
+                            <div class="t-icon shopping"><i class="fa-solid fa-bag-shopping"></i></div>
+                            <div class="t-details">
+                                <h4>Amazon Purchase</h4>
+                                <span>Today, 2:30 PM</span>
+                            </div>
+                            <div class="t-amount negative">-$45.00</div>
+                        </div>
+
+                        <div class="transaction-item">
+                            <div class="t-icon food"><i class="fa-solid fa-utensils"></i></div>
+                            <div class="t-details">
+                                <h4>Starbucks</h4>
+                                <span>Yesterday, 9:15 AM</span>
+                            </div>
+                            <div class="t-amount negative">-$6.50</div>
+                        </div>
+
+                        <div class="transaction-item">
+                            <div class="t-icon income"><i class="fa-solid fa-briefcase"></i></div>
+                            <div class="t-details">
+                                <h4>Salary Deposit</h4>
+                                <span>Oct 1, 2026</span>
+                            </div>
+                            <div class="t-amount positive">+$5,200.00</div>
+                        </div>
+
+                        <div class="transaction-item">
+                            <div class="t-icon bills"><i class="fa-solid fa-bolt"></i></div>
+                            <div class="t-details">
+                                <h4>Electric Bill</h4>
+                                <span>Sep 28, 2026</span>
+                            </div>
+                            <div class="t-amount negative">-$120.00</div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Column: Categories -->
+            <div class="right-col">
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Expense Categories</h2>
+                        <span class="month-badge">October</span>
+                    </div>
+                    
+                    <div class="category-list">
+                        
+                        <div class="category-item">
+                            <div class="cat-header">
+                                <span><i class="fa-solid fa-utensils"></i> Food & Dining</span>
+                                <span>$850.00</span>
+                            </div>
+                            <div class="cat-bar-bg">
+                                <div class="cat-bar fill-food" style="width: 75%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="category-item">
+                            <div class="cat-header">
+                                <span><i class="fa-solid fa-house"></i> Rent & Bills</span>
+                                <span>$1,200.00</span>
+                            </div>
+                            <div class="cat-bar-bg">
+                                <div class="cat-bar fill-bills" style="width: 90%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="category-item">
+                            <div class="cat-header">
+                                <span><i class="fa-solid fa-car"></i> Travel</span>
+                                <span>$350.00</span>
+                            </div>
+                            <div class="cat-bar-bg">
+                                <div class="cat-bar fill-travel" style="width: 40%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="category-item">
+                            <div class="cat-header">
+                                <span><i class="fa-solid fa-film"></i> Entertainment</span>
+                                <span>$200.00</span>
+                            </div>
+                            <div class="cat-bar-bg">
+                                <div class="cat-bar fill-ent" style="width: 25%;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="category-item">
+                            <div class="cat-header">
+                                <span><i class="fa-solid fa-bag-shopping"></i> Shopping</span>
+                                <span>$250.00</span>
+                            </div>
+                            <div class="cat-bar-bg">
+                                <div class="cat-bar fill-shop" style="width: 30%;"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

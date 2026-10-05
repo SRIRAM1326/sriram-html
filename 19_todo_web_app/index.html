@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster | To-Do Web App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <div class="todo-app">
+            
+            <header class="app-header">
+                <h1>TaskMaster</h1>
+                <p>Organize your day efficiently.</p>
+            </header>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <i class="fa-solid fa-search"></i>
+                <input type="text" id="search-input" placeholder="Search tasks...">
+            </div>
+
+            <!-- Add Task Form -->
+            <form id="todo-form" class="todo-form">
+                <input type="text" id="todo-input" placeholder="What needs to be done?" required autocomplete="off">
+                <button type="submit" class="add-btn"><i class="fa-solid fa-plus"></i></button>
+            </form>
+
+            <!-- Task List -->
+            <div class="list-container">
+                <ul id="todo-list" class="todo-list">
+                    <!-- Tasks injected by JS -->
+                </ul>
+                <div id="empty-state" class="empty-state hidden">
+                    <i class="fa-regular fa-clipboard"></i>
+                    <p>No tasks found.</p>
+                </div>
+            </div>
+
+            <!-- Footer Controls -->
+            <footer class="app-footer">
+                <span class="task-count"><strong id="task-counter">0</strong> items left</span>
+                
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="active">Active</button>
+                    <button class="filter-btn" data-filter="completed">Completed</button>
+                </div>
+                
+                <button id="clear-completed" class="clear-btn">Clear Completed</button>
+            </footer>
+
+        </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div class="modal-overlay" id="edit-modal">
+        <div class="modal-content">
+            <h2>Edit Task</h2>
+            <input type="text" id="edit-input" class="edit-input">
+            <div class="modal-actions">
+                <button id="cancel-edit" class="btn secondary">Cancel</button>
+                <button id="save-edit" class="btn primary">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="brand">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h2>EduPortal</h2>
+            </div>
+            
+            <div class="student-profile">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=150&auto=format&fit=crop" alt="Student Avatar">
+                <h3>Emily Rogers</h3>
+                <p>Computer Science - Year 2</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active"><a href="#"><i class="fa-solid fa-border-all"></i> Dashboard</a></li>
+                    <li><a href="#"><i class="fa-solid fa-book-open"></i> Courses</a></li>
+                    <li><a href="#"><i class="fa-solid fa-chart-line"></i> Grades</a></li>
+                    <li><a href="#"><i class="fa-solid fa-calendar-check"></i> Attendance</a></li>
+                    <li><a href="#"><i class="fa-solid fa-bell"></i> Notifications <span class="badge">3</span></a></li>
+                </ul>
+            </nav>
+            
+            <div class="logout">
+                <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="greeting">
+                    <h1>Welcome back, Emily! 👋</h1>
+                    <p>Here's your academic overview for this semester.</p>
+                </div>
+                <div class="search-bar">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" placeholder="Search courses, resources...">
+                </div>
+            </header>
+
+            <!-- Dashboard Cards -->
+            <div class="cards-grid">
+                <div class="stat-card">
+                    <div class="stat-icon bg-blue"><i class="fa-solid fa-book"></i></div>
+                    <div class="stat-details">
+                        <h3>Courses</h3>
+                        <p>6 Enrolled</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon bg-green"><i class="fa-solid fa-user-check"></i></div>
+                    <div class="stat-details">
+                        <h3>Attendance</h3>
+                        <p>94%</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon bg-purple"><i class="fa-solid fa-star"></i></div>
+                    <div class="stat-details">
+                        <h3>Average Grade</h3>
+                        <p>A- (3.8 GPA)</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon bg-orange"><i class="fa-solid fa-file-signature"></i></div>
+                    <div class="stat-details">
+                        <h3>Assignments</h3>
+                        <p>4 Pending</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Grid -->
+            <div class="content-grid">
+                
+                <!-- Upcoming Assignments -->
+                <section class="panel assignments-panel">
+                    <div class="panel-header">
+                        <h2>Upcoming Assignments</h2>
+                        <a href="#">View All</a>
+                    </div>
+                    <div class="assignment-list">
+                        <div class="assignment-item">
+                            <div class="assign-info">
+                                <h4>Data Structures Project 2</h4>
+                                <span>CS201 - Dr. Smith</span>
+                            </div>
+                            <div class="assign-due warning">
+                                Due Tomorrow
+                            </div>
+                        </div>
+                        <div class="assignment-item">
+                            <div class="assign-info">
+                                <h4>Calculus III Problem Set</h4>
+                                <span>MATH210 - Dr. Jones</span>
+                            </div>
+                            <div class="assign-due">
+                                Due in 3 days
+                            </div>
+                        </div>
+                        <div class="assignment-item">
+                            <div class="assign-info">
+                                <h4>Physics Lab Report</h4>
+                                <span>PHYS101 - Dr. Lee</span>
+                            </div>
+                            <div class="assign-due">
+                                Due in 1 week
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Current Courses Progress -->
+                <section class="panel courses-panel">
+                    <div class="panel-header">
+                        <h2>Course Progress</h2>
+                    </div>
+                    <div class="course-list">
+                        
+                        <div class="course-item">
+                            <div class="course-header">
+                                <h4>Data Structures (CS201)</h4>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress fill-blue" style="width: 85%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="course-item">
+                            <div class="course-header">
+                                <h4>Web Development (CS215)</h4>
+                                <span>92%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress fill-green" style="width: 92%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="course-item">
+                            <div class="course-header">
+                                <h4>Linear Algebra (MATH205)</h4>
+                                <span>78%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress fill-orange" style="width: 78%;"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+                
+            </div>
+        </main>
+    </div>
+</body>
+</html>

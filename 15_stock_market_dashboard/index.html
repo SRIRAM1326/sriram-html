@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarketPulse | Stock Dashboard (Demo Data)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard">
+        
+        <header class="header">
+            <div class="logo">
+                <i class="fa-solid fa-chart-line"></i> MarketPulse
+            </div>
+            <div class="demo-warning">
+                <i class="fa-solid fa-triangle-exclamation"></i> Demo Data Only - Not Real Trading
+            </div>
+            <div class="market-status">
+                <span class="status-indicator open"></span> Market Open
+            </div>
+        </header>
+
+        <main class="main-content">
+            
+            <!-- Market Summary -->
+            <section class="market-summary">
+                <h2>Market Summary <span class="text-sm">(Demo)</span></h2>
+                <div class="summary-cards">
+                    
+                    <div class="summary-card">
+                        <div class="card-top">
+                            <span>S&P 500</span>
+                            <span class="positive">+1.24%</span>
+                        </div>
+                        <h3 class="index-value">4,512.43</h3>
+                        <p class="index-change positive">+55.20 Today</p>
+                    </div>
+
+                    <div class="summary-card">
+                        <div class="card-top">
+                            <span>NASDAQ</span>
+                            <span class="positive">+1.85%</span>
+                        </div>
+                        <h3 class="index-value">13,950.12</h3>
+                        <p class="index-change positive">+253.11 Today</p>
+                    </div>
+
+                    <div class="summary-card">
+                        <div class="card-top">
+                            <span>DOW JONES</span>
+                            <span class="negative">-0.45%</span>
+                        </div>
+                        <h3 class="index-value">34,120.50</h3>
+                        <p class="index-change negative">-154.20 Today</p>
+                    </div>
+
+                </div>
+            </section>
+
+            <div class="dashboard-grid">
+                
+                <!-- Watchlist -->
+                <section class="watchlist">
+                    <h2>Your Watchlist</h2>
+                    <div class="watchlist-container">
+                        
+                        <!-- Stock 1 -->
+                        <div class="stock-item">
+                            <div class="stock-info">
+                                <h4>RELIANCE</h4>
+                                <span>Reliance Industries</span>
+                            </div>
+                            <div class="stock-chart">
+                                <!-- CSS-based mini sparkline -->
+                                <div class="sparkline pos">
+                                    <div class="bar" style="height: 30%"></div>
+                                    <div class="bar" style="height: 50%"></div>
+                                    <div class="bar" style="height: 40%"></div>
+                                    <div class="bar" style="height: 70%"></div>
+                                    <div class="bar" style="height: 60%"></div>
+                                    <div class="bar" style="height: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="stock-price text-right">
+                                <h4>₹2,450.20</h4>
+                                <span class="positive">+1.5%</span>
+                            </div>
+                        </div>
+
+                        <!-- Stock 2 -->
+                        <div class="stock-item">
+                            <div class="stock-info">
+                                <h4>TCS</h4>
+                                <span>Tata Consultancy</span>
+                            </div>
+                            <div class="stock-chart">
+                                <div class="sparkline pos">
+                                    <div class="bar" style="height: 40%"></div>
+                                    <div class="bar" style="height: 50%"></div>
+                                    <div class="bar" style="height: 60%"></div>
+                                    <div class="bar" style="height: 80%"></div>
+                                    <div class="bar" style="height: 75%"></div>
+                                    <div class="bar" style="height: 100%"></div>
+                                </div>
+                            </div>
+                            <div class="stock-price text-right">
+                                <h4>₹3,612.45</h4>
+                                <span class="positive">+2.1%</span>
+                            </div>
+                        </div>
+
+                        <!-- Stock 3 -->
+                        <div class="stock-item">
+                            <div class="stock-info">
+                                <h4>INFY</h4>
+                                <span>Infosys Ltd</span>
+                            </div>
+                            <div class="stock-chart">
+                                <div class="sparkline neg">
+                                    <div class="bar" style="height: 100%"></div>
+                                    <div class="bar" style="height: 80%"></div>
+                                    <div class="bar" style="height: 90%"></div>
+                                    <div class="bar" style="height: 50%"></div>
+                                    <div class="bar" style="height: 60%"></div>
+                                    <div class="bar" style="height: 40%"></div>
+                                </div>
+                            </div>
+                            <div class="stock-price text-right">
+                                <h4>₹1,420.10</h4>
+                                <span class="negative">-0.8%</span>
+                            </div>
+                        </div>
+
+                        <!-- Stock 4 -->
+                        <div class="stock-item">
+                            <div class="stock-info">
+                                <h4>HDFCBANK</h4>
+                                <span>HDFC Bank</span>
+                            </div>
+                            <div class="stock-chart">
+                                <div class="sparkline pos">
+                                    <div class="bar" style="height: 20%"></div>
+                                    <div class="bar" style="height: 30%"></div>
+                                    <div class="bar" style="height: 50%"></div>
+                                    <div class="bar" style="height: 40%"></div>
+                                    <div class="bar" style="height: 60%"></div>
+                                    <div class="bar" style="height: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="stock-price text-right">
+                                <h4>₹1,580.90</h4>
+                                <span class="positive">+0.5%</span>
+                            </div>
+                        </div>
+
+                        <!-- Stock 5 -->
+                        <div class="stock-item">
+                            <div class="stock-info">
+                                <h4>SBIN</h4>
+                                <span>State Bank of India</span>
+                            </div>
+                            <div class="stock-chart">
+                                <div class="sparkline neg">
+                                    <div class="bar" style="height: 80%"></div>
+                                    <div class="bar" style="height: 90%"></div>
+                                    <div class="bar" style="height: 70%"></div>
+                                    <div class="bar" style="height: 50%"></div>
+                                    <div class="bar" style="height: 30%"></div>
+                                    <div class="bar" style="height: 20%"></div>
+                                </div>
+                            </div>
+                            <div class="stock-price text-right">
+                                <h4>₹590.25</h4>
+                                <span class="negative">-1.2%</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- Detailed Stock Card -->
+                <section class="detailed-view">
+                    <div class="detail-header">
+                        <div>
+                            <h2>RELIANCE <span class="badge">NSE</span></h2>
+                            <p>Reliance Industries Ltd. (Demo)</p>
+                        </div>
+                        <div class="text-right">
+                            <h2 class="massive-price">₹2,450.20</h2>
+                            <span class="positive massive-change"><i class="fa-solid fa-arrow-up"></i> 36.75 (1.5%)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <span class="label">Volume</span>
+                            <span class="value">4.2M</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="label">Avg Vol (3m)</span>
+                            <span class="value">5.1M</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="label">Day Range</span>
+                            <span class="value">2,410 - 2,465</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="label">52W Range</span>
+                            <span class="value">2,180 - 2,850</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="label">Market Cap</span>
+                            <span class="value">₹16.5T</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="label">P/E Ratio</span>
+                            <span class="value">24.5</span>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-feed">
+                        <h3>Recent Activity</h3>
+                        <ul>
+                            <li><span class="time">14:32</span> <span class="action buy">BUY</span> 100 shares @ ₹2,450.20</li>
+                            <li><span class="time">14:30</span> <span class="action sell">SELL</span> 50 shares @ ₹2,449.80</li>
+                            <li><span class="time">14:25</span> <span class="action buy">BUY</span> 500 shares @ ₹2,448.50</li>
+                        </ul>
+                    </div>
+
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

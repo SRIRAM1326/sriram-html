@@ -1,0 +1,192 @@
+:root {
+    /* Pomodoro colors */
+    --bg-pomodoro: #ba4949;
+    --bg-short: #38858a;
+    --bg-long: #397097;
+    --current-bg: var(--bg-pomodoro);
+    
+    --card-bg: rgba(255, 255, 255, 0.1);
+    --text-main: #ffffff;
+    --text-muted: rgba(255, 255, 255, 0.7);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Varela Round', sans-serif;
+    background-color: var(--current-bg);
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background-color 0.5s ease;
+}
+
+.pomodoro-app {
+    width: 100%;
+    max-width: 480px;
+    padding: 1rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.settings-btn {
+    background: var(--card-bg);
+    border: none;
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background 0.2s;
+}
+
+.settings-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Timer Container */
+.timer-container {
+    background: var(--card-bg);
+    padding: 2rem 1rem;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mode-selector {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 3rem;
+}
+
+.mode-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-weight: bold;
+}
+
+.mode-btn.active {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+/* SVG Circle */
+.timer-circle {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 3rem;
+}
+
+.progress-ring {
+    position: absolute;
+    top: 0; left: 0;
+    transform: rotate(-90deg);
+}
+
+.progress-ring__bg {
+    stroke: rgba(255, 255, 255, 0.1);
+}
+
+.progress-ring__circle {
+    stroke: white;
+    stroke-dasharray: 879; /* 2 * pi * 140 */
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 1s linear;
+}
+
+.time-display {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#time {
+    font-size: 5rem;
+    font-weight: bold;
+    line-height: 1;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+#mode-label {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.control-btn {
+    border: none;
+    font-family: inherit;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.1s, background 0.2s;
+}
+
+.control-btn:active {
+    transform: translateY(2px);
+}
+
+.control-btn.primary {
+    background: white;
+    color: var(--current-bg);
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 6px 0 rgba(0,0,0,0.1);
+}
+
+.control-btn.secondary {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 1.5rem;
+    width: 64px;
+    height: 64px;
+}
+
+/* Stats */
+.stats {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+}

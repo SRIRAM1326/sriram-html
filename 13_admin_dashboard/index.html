@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-cube"></i> NexusAdmin
+            </div>
+            <ul class="nav-links">
+                <li class="active"><a href="#"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+                <li><a href="#"><i class="fa-solid fa-users"></i> Users</a></li>
+                <li><a href="#"><i class="fa-solid fa-chart-pie"></i> Analytics</a></li>
+                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i> Orders</a></li>
+                <li><a href="#"><i class="fa-solid fa-message"></i> Messages <span class="badge">5</span></a></li>
+                <li><a href="#"><i class="fa-solid fa-gear"></i> Settings</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Nav -->
+            <header class="top-nav">
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search everywhere...">
+                </div>
+                <div class="nav-right">
+                    <div class="notification-icon">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="dot"></span>
+                    </div>
+                    <div class="profile-menu">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=100&auto=format&fit=crop" alt="Admin">
+                        <span>Admin <i class="fa-solid fa-chevron-down"></i></span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <h1 class="page-title">Dashboard Overview</h1>
+                
+                <!-- Stat Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-info">
+                            <span class="stat-title">Total Users</span>
+                            <h3 class="stat-value">12,450</h3>
+                            <span class="stat-trend positive"><i class="fa-solid fa-arrow-up"></i> +14.5%</span>
+                        </div>
+                        <div class="stat-icon bg-blue"><i class="fa-solid fa-users"></i></div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-info">
+                            <span class="stat-title">Revenue</span>
+                            <h3 class="stat-value">$84,210</h3>
+                            <span class="stat-trend positive"><i class="fa-solid fa-arrow-up"></i> +8.2%</span>
+                        </div>
+                        <div class="stat-icon bg-green"><i class="fa-solid fa-dollar-sign"></i></div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-info">
+                            <span class="stat-title">Orders</span>
+                            <h3 class="stat-value">1,124</h3>
+                            <span class="stat-trend negative"><i class="fa-solid fa-arrow-down"></i> -3.1%</span>
+                        </div>
+                        <div class="stat-icon bg-purple"><i class="fa-solid fa-cart-shopping"></i></div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-info">
+                            <span class="stat-title">Pending Tasks</span>
+                            <h3 class="stat-value">38</h3>
+                            <span class="stat-trend neutral"><i class="fa-solid fa-minus"></i> 0%</span>
+                        </div>
+                        <div class="stat-icon bg-orange"><i class="fa-solid fa-list-check"></i></div>
+                    </div>
+                </div>
+
+                <!-- Tables and Activity -->
+                <div class="bottom-grid">
+                    <!-- Users Table -->
+                    <div class="card table-card">
+                        <div class="card-header">
+                            <h2>Recent Users</h2>
+                            <button class="btn-outline">View All</button>
+                        </div>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Role</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><div class="user-cell"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=50&auto=format&fit=crop" alt=""> Sarah Connor</div></td>
+                                    <td>sarah@example.com</td>
+                                    <td>Admin</td>
+                                    <td><span class="status active">Active</span></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="user-cell"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=50&auto=format&fit=crop" alt=""> John Smith</div></td>
+                                    <td>john@example.com</td>
+                                    <td>Editor</td>
+                                    <td><span class="status active">Active</span></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="user-cell"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=50&auto=format&fit=crop" alt=""> Emily Davis</div></td>
+                                    <td>emily@example.com</td>
+                                    <td>User</td>
+                                    <td><span class="status pending">Pending</span></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="user-cell"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=50&auto=format&fit=crop" alt=""> Mike Wilson</div></td>
+                                    <td>mike@example.com</td>
+                                    <td>User</td>
+                                    <td><span class="status inactive">Inactive</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Recent Activity -->
+                    <div class="card activity-card">
+                        <div class="card-header">
+                            <h2>Recent Activity</h2>
+                        </div>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <div class="activity-icon bg-blue"><i class="fa-solid fa-user-plus"></i></div>
+                                <div class="activity-info">
+                                    <p><strong>New User Registered</strong></p>
+                                    <span>5 mins ago</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon bg-green"><i class="fa-solid fa-cart-shopping"></i></div>
+                                <div class="activity-info">
+                                    <p><strong>New Order #4821</strong></p>
+                                    <span>2 hours ago</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon bg-orange"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                                <div class="activity-info">
+                                    <p><strong>Server load warning</strong></p>
+                                    <span>5 hours ago</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon bg-purple"><i class="fa-solid fa-download"></i></div>
+                                <div class="activity-info">
+                                    <p><strong>Database backup complete</strong></p>
+                                    <span>1 day ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>
